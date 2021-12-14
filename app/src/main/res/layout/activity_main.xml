@@ -14,26 +14,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp">
 
-        <EditText
-            android:id="@+id/etIP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Coloque o IP da ESP"
-            android:inputType="textPersonName" />
-
-        <Button
-            android:id="@+id/ctConexao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Conectar" />
-
-        <Button
-            android:id="@+id/btAtualizar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Atualizar" />
-
         <TextView
             android:id="@+id/tvMedicaoFluxo"
             android:layout_width="match_parent"
@@ -63,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:onClick="mudarEstadoValvula"
+            android:onClick="controleValvula"
             android:textOff="Fechada"
             android:textOn="Aberta" />
 
@@ -72,6 +52,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gerar Relatório" />
+
+        <TextView
+            android:id="@+id/tvStatusMqtt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aguardando Conexão" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
